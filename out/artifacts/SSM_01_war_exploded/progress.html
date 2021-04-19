@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进度条实时更新</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- 引入BootStrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <style>
+        body{
+            padding: 10px;
+        }
+    </style>
+    <script>
+        $(function(){
+            var i = 0;
+            setInterval(function (){
+                $(".bar1").css("width",i+"%");
+                $(".bar2").css("width",i*2+"%");
+                $(".bar3").css("width",i*3+"%");
+                $(".bar4").css("width",i*2+"%");
+                $(".bar5").css("width",i+"%");
+                i++;
+            },500);
+            });
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="progress">
+            <div class="progress-bar bar1" ></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar bar2 progress-bar-success progress-bar-striped active"></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar bar3 progress-bar-info progress-bar-striped active"></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar bar4 progress-bar-warning progress-bar-striped active"></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar bar5 progress-bar-danger progress-bar-striped active"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
